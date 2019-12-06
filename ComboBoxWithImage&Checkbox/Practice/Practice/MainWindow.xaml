@@ -1,0 +1,39 @@
+﻿<Window x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        Loaded="Window_Loaded">
+    <Grid>
+        <ComboBox Name="CmbBeverages" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150px" Height="25px" Margin="30,20,0,0" DropDownClosed="CmbBeverages_DropDownClosed">
+            <!--<CheckBox>                
+                <ComboBoxItem>Juice</ComboBoxItem>
+            </CheckBox>
+            <CheckBox>
+                <ComboBoxItem>Milk Coffee</ComboBoxItem>
+            </CheckBox>
+            <CheckBox>
+                <ComboBoxItem>Milk Tea</ComboBoxItem>
+            </CheckBox>
+            <CheckBox>
+                <ComboBoxItem>Iced Tea</ComboBoxItem>
+            </CheckBox>
+            <CheckBox>
+                <ComboBoxItem>Black Coffee</ComboBoxItem>
+            </CheckBox>
+            <CheckBox>
+                <ComboBoxItem>Black Tea</ComboBoxItem>
+            </CheckBox>-->
+            <ComboBoxItem>Juice</ComboBoxItem>
+            <ComboBoxItem>Milk Coffee</ComboBoxItem>
+            <ComboBoxItem>Milk Tea</ComboBoxItem>
+            <ComboBoxItem>Iced Tea</ComboBoxItem>
+            <ComboBoxItem>Black Coffee</ComboBoxItem>
+            <ComboBoxItem>Black Tea</ComboBoxItem>
+        </ComboBox>
+        <Label Name="lblBeverages" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,200,0,0"></Label>
+    </Grid>
+</Window>

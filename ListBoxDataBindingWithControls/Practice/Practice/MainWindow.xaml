@@ -1,0 +1,33 @@
+﻿<Window x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="525"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Loaded="Window_Loaded">
+
+    <Grid>
+        <ListBox Name="LstColors" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,30,0,0" Height="200" Width="200">
+            <ListBoxItem>Blue</ListBoxItem>
+            <ListBoxItem>Red</ListBoxItem>
+            <ListBoxItem>Orange</ListBoxItem>
+            <ListBoxItem>Aqua</ListBoxItem>
+            <ListBoxItem>Maroon</ListBoxItem>
+        </ListBox>
+        
+        <TextBox Name="TxtColor" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,250,0,0" Height="30" Width="150" TextAlignment="Left" SelectionChanged="TxtColor_SelectionChanged">
+            <TextBox.Text>
+                <Binding ElementName="LstColors" Path="SelectedItem.Content"></Binding>
+            </TextBox.Text>            
+        </TextBox>
+
+        <Canvas Name="CnvsClr" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="250">
+            <Canvas.Background>
+                <Binding ElementName="LstColors" Path="SelectedItem.Content"></Binding>               
+            </Canvas.Background>
+        </Canvas>
+    </Grid>
+</Window>
